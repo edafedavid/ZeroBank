@@ -36,6 +36,7 @@ public class Commonstep1 extends TestBase {
        page.enterloginUsername();
        page.enterloginpassword();
        page.clicksubmit();
+       driver.navigate().back();
 
 
 
