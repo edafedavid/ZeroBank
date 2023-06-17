@@ -18,6 +18,13 @@ public class Bobby_sPOM {
     @FindBy(how = How.CSS, using = "div.alert")
     public static WebElement ErrorMessage;
 
+    @FindBy(how = How.ID, using = "onlineBankingMenu")
+    public static WebElement OnlineBanking;
+
+
+    @FindBy(how = How.XPATH, using = "//h1")
+    public static WebElement onlinebankingmessage;
+
     public void EnterLoginField(String Login) {
         LoginField.sendKeys(Login);
     }
@@ -31,6 +38,15 @@ public class Bobby_sPOM {
     public void AssertInvalidLogin(String error_message) {
         String ActualText = ErrorMessage.getText();
         Assert.assertEquals(ActualText, error_message);
+        System.out.println("This is the error message displayed: " + ActualText);
+    }
+
+    public void ClickOnlineBankingBtn(){ OnlineBanking.click();}
+
+    public void AssertOnlineBankingpage() {
+        String ExpectedTxt = "Online Banking";
+        String ActualText = onlinebankingmessage.getText();
+        Assert.assertEquals(ActualText, ExpectedTxt);
         System.out.println("This is the error message displayed: " + ActualText);
     }
 }
