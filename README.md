@@ -1,1 +1,2 @@
 # ZeroBank
+# Learning quite well
