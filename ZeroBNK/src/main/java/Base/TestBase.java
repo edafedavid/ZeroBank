@@ -32,7 +32,7 @@ public class TestBase {
                 System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
                 driver = new ChromeDriver();
             }
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
         }
 
     }
