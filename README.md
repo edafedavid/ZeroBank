@@ -1,1 +1,3 @@
 # ZeroBank
+
+Learning alot
